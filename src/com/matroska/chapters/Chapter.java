@@ -7,7 +7,7 @@ import org.joda.time.LocalTime;
  *  @version 1.0 - 10/JAN/2024 */
 public class Chapter {
 	
-	private final LocalTime startTime;
+	private LocalTime startTime;
 	private final String chapterTitle; 
 	
 	/** Extracts data from a <code>row</code> containing the chapter start time and title.
@@ -29,7 +29,7 @@ public class Chapter {
 		StringBuilder builder = new StringBuilder();
 		
 		if (startTime.getHourOfDay() > 0)
-			builder.append(startTime.toString("HH:mm:ss "));
+			builder.append(startTime.toString("H:mm:ss "));
 		else
 			builder.append(startTime.toString("m:ss "));
 		

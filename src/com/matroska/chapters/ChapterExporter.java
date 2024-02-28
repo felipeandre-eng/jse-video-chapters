@@ -17,9 +17,9 @@ public class ChapterExporter {
 
 	public static void main(String[] args) throws ParserConfigurationException, TransformerException, IOException {
 		
-		File file = new File("D:\\Item 10_chapters.txt");
+		File file = new File("D:\\chapters.txt");
 		File youtube = new File("D:\\youtube.txt");
-		File matroska = new File("D:\\matroska.txt");
+		File matroska = new File("D:\\matroska.xml");
 		
 		FileUtils.writeStringToFile(youtube , exportYoutubeChapters (parse(file)),                StandardCharsets.UTF_8);
 		FileUtils.writeStringToFile(matroska, exportMatroskaChapters(parse(file) , "sgn", "bzs"), StandardCharsets.UTF_8);
